@@ -19,7 +19,7 @@ export default function Home() {
   return (
     <main>
       <header className="topbar">
-        <a className="brand" href="#"><span>WaSanDo</span><small>和讃堂</small></a>
+        <a className="brand" href="#" aria-label="WaSanDo 和讃堂"><img src="https://raw.githubusercontent.com/ktsuyukusa/wasando-hub/main/public/wasando-logo.png" alt="WaSanDo 和讃堂" /><span><strong>WaSanDo</strong><small>和讃堂</small></span></a>
         <nav><a href="#routes" onClick={() => setSelected("company")}>{t.nav.routes}</a><a href="#routes" onClick={() => setSelected("income")}>{t.nav.tools}</a><a href="#routes" onClick={() => setSelected("takeover")}>{locale === "ja" ? "稼いでいる事業を手に入れる" : locale === "en" ? "Acquire an earning business" : "Przejmij dochodowy biznes"}</a><div className="locale">{(["ja","en","pl"] as Locale[]).map((l)=><button key={l} className={locale===l?"active":""} onClick={()=>setLocale(l)}>{l.toUpperCase()}</button>)}</div><a className="navCta" href="#contact">{t.nav.contact}</a></nav>
       </header>
 
@@ -33,7 +33,7 @@ export default function Home() {
         <div className="heroMap" aria-label="income system">
           <div className="orbit orbitA"><span>今の利益</span><span>新しい収入</span></div>
           <div className="orbit orbitB"><span>自動化</span><span>海外</span></div>
-          <div className="core"><small>100 YEARS</small><strong>稼ぎ<br/>続ける</strong></div>
+          <div className="core"><img src="https://raw.githubusercontent.com/ktsuyukusa/wasando-hub/main/public/wasando-logo.png" alt="" /><div className="coreMessage"><small>100 YEARS</small><strong>稼ぎ<br/>続ける</strong></div></div>
           <p>人・一社・一市場への<br/>依存を減らす</p>
         </div>
       </section>
