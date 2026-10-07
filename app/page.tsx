@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { content } from "../lib/content";
 import type { Locale } from "../lib/site-config";
 
@@ -11,6 +11,10 @@ export default function Home() {
   const t = content[locale];
   const [selected, setSelected] = useState<RouteId>("company");
   const route = t.routes.find((item) => item.id === selected) ?? t.routes[0];
+
+  useEffect(() => {
+    document.documentElement.lang = locale;
+  }, [locale]);
 
   return (
     <main>
