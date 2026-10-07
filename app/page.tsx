@@ -1,8 +1,8 @@
 "use client";
 
 import { useState } from "react";
-import { content } from "@/lib/content";
-import type { Locale } from "@/lib/site-config";
+import { content } from "../lib/content";
+import type { Locale } from "../lib/site-config";
 
 type RouteId = "company" | "income" | "takeover";
 
