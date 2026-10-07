@@ -1,7 +1,7 @@
 "use client";
 
 import { useState } from "react";
-import { content } from "@/lib/content";
+import { content } from "@/lib/content";\nimport type { Locale } from "@/lib/site-config";
 
 type RouteId = "company" | "income" | "takeover";
 
@@ -14,7 +14,7 @@ export default function Home() {
     <main>
       <header className="topbar">
         <a className="brand" href="#"><span>WaSanDo</span><small>和讃堂</small></a>
-        <nav><a href="#routes">{t.nav.routes}</a><a href="#tools">{t.nav.tools}</a><a className="navCta" href="#contact">{t.nav.contact}</a></nav>
+        <nav><a href="#routes">{t.nav.routes}</a><a href="#tools">{t.nav.tools}</a><div className="locale">{(["ja","en","pl"] as Locale[]).map((l)=><button key={l} className={locale===l?"active":""} onClick={()=>setLocale(l)}>{l.toUpperCase()}</button>)}</div><a className="navCta" href="#contact">{t.nav.contact}</a></nav>
       </header>
 
       <section className="hero">
@@ -33,7 +33,7 @@ export default function Home() {
       </section>
 
       <section className="routes" id="routes">
-        <div className="sectionHead"><p className="eyebrow">START HERE</p><h2>今、どこにいますか？</h2><p>出発点が違えば、最初に動かす場所も違います。</p></div>
+        <div className="sectionHead"><p className="eyebrow">START HERE</p><h2>{t.startTitle}</h2><p>{t.startLead}</p></div>
         <div className="routeTabs">
           {t.routes.map((item) => (
             <button key={item.id} className={selected === item.id ? "active" : ""} onClick={() => setSelected(item.id as RouteId)}>
@@ -52,7 +52,7 @@ export default function Home() {
         <div className="toolGrid">{t.toolExamples.map((tool, i) => <div key={tool}><small>{String(i+1).padStart(2,"0")}</small><strong>{tool}</strong><span>単独利用 / 組合せ / White Label / Multilingual</span></div>)}</div>
       </section>
 
-      <section className="closing" id="contact"><p className="eyebrow">NEXT MOVE</p><h2>{t.closing}</h2><p>{t.closingText}</p><a className="primary" href="mailto:contact@wasando.com">相談する <b>→</b></a></section>
+      <section className="closing" id="contact"><p className="eyebrow">NEXT MOVE</p><h2>{t.closing}</h2><p>{t.closingText}</p><a className="primary" href="mailto:contact@wasando.com">{t.consult} <b>→</b></a></section>
       <footer><span>WaSanDo 和讃堂</span><small>Small tools. Durable income.</small></footer>
     </main>
   );
