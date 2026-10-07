@@ -20,7 +20,7 @@ export default function Home() {
     <main>
       <header className="topbar">
         <a className="brand" href="#"><span>WaSanDo</span><small>和讃堂</small></a>
-        <nav><a href="#routes">{t.nav.routes}</a><a href="#tools">{t.nav.tools}</a><div className="locale">{(["ja","en","pl"] as Locale[]).map((l)=><button key={l} className={locale===l?"active":""} onClick={()=>setLocale(l)}>{l.toUpperCase()}</button>)}</div><a className="navCta" href="#contact">{t.nav.contact}</a></nav>
+        <nav><a href="#routes" onClick={() => setSelected("company")}>{t.nav.routes}</a><a href="#routes" onClick={() => setSelected("income")}>{t.nav.tools}</a><a href="#routes" onClick={() => setSelected("takeover")}>{locale === "ja" ? "稼いでいる事業を手に入れる" : locale === "en" ? "Acquire an earning business" : "Przejmij dochodowy biznes"}</a><div className="locale">{(["ja","en","pl"] as Locale[]).map((l)=><button key={l} className={locale===l?"active":""} onClick={()=>setLocale(l)}>{l.toUpperCase()}</button>)}</div><a className="navCta" href="#contact">{t.nav.contact}</a></nav>
       </header>
 
       <section className="hero">
