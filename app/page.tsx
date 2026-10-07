@@ -1,12 +1,14 @@
 "use client";
 
 import { useState } from "react";
-import { content } from "@/lib/content";\nimport type { Locale } from "@/lib/site-config";
+import { content } from "@/lib/content";
+import type { Locale } from "@/lib/site-config";
 
 type RouteId = "company" | "income" | "takeover";
 
 export default function Home() {
-  const t = content.ja;
+  const [locale, setLocale] = useState<Locale>("ja");
+  const t = content[locale];
   const [selected, setSelected] = useState<RouteId>("company");
   const route = t.routes.find((item) => item.id === selected) ?? t.routes[0];
 
