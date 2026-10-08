@@ -56,8 +56,17 @@ export default function Home() {
       </section>
 
       <section className="tools" id="tools">
-        <div className="sectionHead"><p className="eyebrow">MORE WAYS TO EARN</p><h2>{t.toolsTitle}</h2><p>{t.toolsLead}</p></div>
-        <div className="toolGrid">{t.toolExamples.map((tool, i) => <div key={tool}><small>{String(i+1).padStart(2,"0")}</small><strong>{tool}</strong></div>)}</div>
+        <div className="sectionHead"><p className="eyebrow">OFFERS</p><h2>{t.toolsTitle}</h2><p>{t.toolsLead}</p></div>
+        <div className="offerGrid">{t.offers.map((offer, i) => (
+          <article className="offerCard" key={offer.name}>
+            <div className="offerNo">{String(i+1).padStart(2,"0")}</div>
+            <h3>{offer.name}</h3>
+            <p className="offerFor">{offer.forWhom}</p>
+            <p className="offerResult">{offer.result}</p>
+            <div className="offerDeliverable"><small>{locale === "ja" ? "納品" : locale === "en" ? "YOU GET" : "OTRZYMUJESZ"}</small><strong>{offer.deliverable}</strong></div>
+            <a className="offerCta" href="#contact">{offer.cta}<b>→</b></a>
+          </article>
+        ))}</div>
       </section>
 
       <section className="closing" id="contact"><p className="eyebrow">NEXT MOVE</p><h2>{t.closing}</h2><p>{t.closingText}</p><a className="primary" href="mailto:contact@wasando.com">{t.consult} <b>→</b></a></section>
