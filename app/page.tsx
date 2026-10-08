@@ -30,11 +30,13 @@ export default function Home() {
           <p className="lead">{t.lead}</p>
           <a className="primary" href="#routes">{t.choose}<b>↓</b></a>
         </div>
-        <div className="heroMap" aria-label="income system">
-          <div className="orbit orbitA"><span>今の利益</span><span>新しい収入</span></div>
-          <div className="orbit orbitB"><span>自動化</span><span>海外</span></div>
-          <div className="core"><img src="/wasando-logo.png" alt="" /><div className="coreMessage"><small>100 YEARS</small><strong>稼ぎ<br/>続ける</strong></div></div>
-          <p>人・一社・一市場への<br/>依存を減らす</p>
+        <div className="heroMap profitEngine" aria-label="income system">
+          <div className="engineLever leverTop"><small>01</small><strong>{locale === "ja" ? "既存事業" : locale === "en" ? "EXISTING BUSINESS" : "OBECNY BIZNES"}</strong><span>{locale === "ja" ? "収益を拡大" : locale === "en" ? "Grow revenue" : "Zwiększ przychody"}</span></div>
+          <div className="engineLever leverRight"><small>02</small><strong>{locale === "ja" ? "新規収入源" : locale === "en" ? "NEW INCOME" : "NOWY DOCHÓD"}</strong><span>{locale === "ja" ? "稼ぎ口を追加" : locale === "en" ? "Add income streams" : "Dodaj źródła"}</span></div>
+          <div className="engineCore"><img src="/wasando-logo.png" alt="WaSanDo" /></div>
+          <div className="engineLever leverBottom"><small>03</small><strong>{locale === "ja" ? "自動化" : locale === "en" ? "AUTOMATION" : "AUTOMATYZACJA"}</strong><span>{locale === "ja" ? "人への依存を軽減" : locale === "en" ? "Reduce dependency" : "Mniej zależności"}</span></div>
+          <div className="engineLever leverLeft"><small>04</small><strong>{locale === "ja" ? "海外展開" : locale === "en" ? "NEW MARKETS" : "NOWE RYNKI"}</strong><span>{locale === "ja" ? "市場を広げる" : locale === "en" ? "Expand markets" : "Rozszerz rynki"}</span></div>
+          <div className="engineOutcome"><small>WASANDO 100</small><strong>{locale === "ja" ? "安定した利益を、生み続ける。" : locale === "en" ? "Keep generating durable profit." : "Trwale generuj zysk."}</strong></div>
         </div>
       </section>
 
