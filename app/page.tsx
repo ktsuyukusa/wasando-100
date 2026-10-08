@@ -77,7 +77,7 @@ export default function Home() {
               <strong>{locale === "ja" ? "回収できた売上まで測定" : locale === "en" ? "Measure revenue recovered" : "Mierz odzyskany przychód"}</strong>
               <span>{locale === "ja" ? "不在着信数 → 顧客回答 → 見積・予約 → 受注 → 回収売上" : locale === "en" ? "Missed calls → replies → quotes/bookings → wins → recovered revenue" : "Nieodebrane → odpowiedzi → wyceny/rezerwacje → sprzedaż → odzyskany przychód"}</span>
             </div>
-            <a className="offerCta" href="#contact">{locale === "ja" ? "この仕組みを導入する" : locale === "en" ? "Install this system" : "Wdróż ten system"}<b>→</b></a>
+            <a className="offerCta" href="/recovery">{locale === "ja" ? "実際に試してみる" : locale === "en" ? "Try the working demo" : "Wypróbuj działające demo"}<b>→</b></a>
           </article>
 
           <article className="fastCard">
