@@ -57,9 +57,9 @@ export default function Home() {
 
       <section className="tools" id="tools">
         <div className="sectionHead">
-          <p className="eyebrow">{locale === "ja" ? "FAST TRACK｜すぐ使える「稼ぐ」ツール" : locale === "en" ? "FAST TRACK｜TOOLS THAT MAKE OR RECOVER REVENUE" : "FAST TRACK｜NARZĘDZIA DO ZWIĘKSZANIA PRZYCHODU"}</p>
-          <h2>{locale === "ja" ? "目的が決まっている方は、ここから直接。" : locale === "en" ? "Know what you need? Start here." : "Wiesz, czego potrzebujesz? Zacznij tutaj."}</h2>
-          <p>{locale === "ja" ? "「AIを使う」ことではなく、売上を取り戻す・増やす・新しくつくる為の実用品です。" : locale === "en" ? "Practical products to recover, increase or create revenue — not AI for its own sake." : "Praktyczne produkty do odzyskiwania, zwiększania i tworzenia przychodu — nie AI dla samego AI."}</p>
+          <p className="eyebrow">{locale === "ja" ? "すぐ使える｜売上改善ツール" : locale === "en" ? "READY TO USE｜REVENUE TOOLS" : "GOTOWE DO UŻYCIA｜NARZĘDZIA SPRZEDAŻOWE"}</p>
+          <h2>{locale === "ja" ? "逃している売上を、取りにいく。" : locale === "en" ? "Recover the revenue you are already missing." : "Odzyskaj sprzedaż, która dziś Ci ucieka."}</h2>
+          <p>{locale === "ja" ? "電話に出られない。見積を出したまま。次の点検時期を逃す。すでにある需要を売上に変えるところから始めます。さらに、今ある強みから新しい収入や海外売上をつくるツールも用意します。" : locale === "en" ? "Missed calls, forgotten quotes and missed service dates are already costing sales. Recover that demand first, then use what you already have to create new and overseas revenue." : "Nieodebrane telefony, zapomniane wyceny i przegapione terminy serwisu już kosztują sprzedaż. Najpierw odzyskaj ten popyt, potem wykorzystaj obecne mocne strony do tworzenia nowych i zagranicznych przychodów."}</p>
         </div>
         <div className="fastGrid">
           <article className="fastCard fastPrimary">
