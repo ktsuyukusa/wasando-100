@@ -56,8 +56,8 @@ export default function Home() {
       </section>
 
       <section className="tools" id="tools">
-        <div className="sectionHead"><p className="eyebrow">SMALL TOOLS · WORKING TOGETHER</p><h2>{t.toolsTitle}</h2><p>{t.toolsLead}</p></div>
-        <div className="toolGrid">{t.toolExamples.map((tool, i) => <div key={tool}><small>{String(i+1).padStart(2,"0")}</small><strong>{tool}</strong><span>単独利用 / 組合せ / White Label / Multilingual</span></div>)}</div>
+        <div className="sectionHead"><p className="eyebrow">MORE WAYS TO EARN</p><h2>{t.toolsTitle}</h2><p>{t.toolsLead}</p></div>
+        <div className="toolGrid">{t.toolExamples.map((tool, i) => <div key={tool}><small>{String(i+1).padStart(2,"0")}</small><strong>{tool}</strong></div>)}</div>
       </section>
 
       <section className="closing" id="contact"><p className="eyebrow">NEXT MOVE</p><h2>{t.closing}</h2><p>{t.closingText}</p><a className="primary" href="mailto:contact@wasando.com">{t.consult} <b>→</b></a></section>
