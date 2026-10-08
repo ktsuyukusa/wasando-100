@@ -206,3 +206,24 @@ nav{font-size:15px;gap:26px}nav a:not(.navCta){color:var(--muted)}nav a:not(.nav
 }
 .offerCta b{font-size:20px}
 @media(max-width:800px){.offerGrid{grid-template-columns:1fr}.offerCard{min-height:0}}
+
+
+/* Fast-track revenue product shelf */
+.fastGrid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:26px;margin-top:54px}
+.fastCard{display:flex;flex-direction:column;min-height:310px;padding:32px;border-radius:30px;background:var(--paper);box-shadow:var(--raised)}
+.fastPrimary{grid-column:1/-1;min-height:390px;padding:42px}
+.fastTag{font-size:10px;font-weight:800;letter-spacing:.14em;color:var(--torii)}
+.fastCard h3{margin:18px 0 10px;font-size:clamp(24px,2.1vw,34px);line-height:1.2;color:var(--ink)}
+.fastPrimary h3{font-size:clamp(32px,3vw,48px)}
+.fastCard p{margin:0;color:var(--muted);font-size:15px;line-height:1.85}
+.fastHook{font-size:clamp(18px,1.6vw,22px)!important;font-weight:800;color:var(--red)!important}
+.recoveryFlow{display:flex;align-items:center;gap:10px;flex-wrap:wrap;margin:30px 0}
+.recoveryFlow span{padding:12px 15px;border-radius:14px;box-shadow:var(--inset);font-size:13px;font-weight:800;color:var(--ink)}
+.recoveryFlow b{color:var(--torii)}
+.fastBenefits{display:grid;gap:6px;padding:18px 20px;border-radius:18px;box-shadow:var(--inset)}
+.fastBenefits strong{font-size:16px;color:var(--ink)}
+.fastBenefits span{font-size:13px;color:var(--muted)}
+.fastPrimary .offerCta{max-width:330px}
+.fastLink{margin-top:auto;padding-top:26px;font-size:14px;font-weight:800;color:var(--red)}
+.fastLink:hover{text-decoration:underline}
+@media(max-width:800px){.fastGrid{grid-template-columns:1fr}.fastPrimary{grid-column:auto;padding:30px}.recoveryFlow{align-items:stretch}.recoveryFlow span{flex:1 1 42%;text-align:center}.recoveryFlow b{display:none}}
